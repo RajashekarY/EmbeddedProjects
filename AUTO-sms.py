@@ -2,7 +2,7 @@ import requests
 import json
 import datetime
 URL = 'https://www.way2sms.com/api/v1/sendCampaign'
-
+# Send SMS using python and Way2SMS
 # get request
 def sendPostRequest(reqUrl, apiKey, secretKey, useType, phoneNo, senderId, textMessage):
   req_params = {
@@ -16,7 +16,7 @@ def sendPostRequest(reqUrl, apiKey, secretKey, useType, phoneNo, senderId, textM
   return requests.post(reqUrl, req_params)
 
 # get response
-response = sendPostRequest(URL, '06S00GGWBJK6OQTAUEH7TMXCNU0B50TK', 'U44RMESW4B44NBIW', 'stage', '8686563675', 'active-sender-id', 'Training Halted at {}'.format(datetime.datetime.now()) )
+response = sendPostRequest(URL, 'your-API-Key-Here', 'your-Password', 'stage', 'Receivers-Number', 'active-sender-id', 'Training Halted at {}'.format(datetime.datetime.now()) )
 """
   Note:-
     you must provide apikey, secretkey, usetype, mobile, senderid and message values
